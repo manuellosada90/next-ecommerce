@@ -1,3 +1,4 @@
+// eslint-disable-next-line prettier/prettier
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
@@ -9,5 +10,5 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }
