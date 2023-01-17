@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from "../../components/layout";
 import Product from "@/components/product";
 import { getItems } from "@/services/itemService";
 import styleItems from "../../styles/product.module.css";

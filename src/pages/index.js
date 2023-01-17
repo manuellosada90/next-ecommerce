@@ -1,7 +1,7 @@
 import Layout from "../components/layout";
-import styleProduct from "../styles/product.module.css";
 import { getLatestItems } from "@/services/itemService";
 import Product from "@/components/product";
+import styleProduct from "../styles/product.module.css";
 import style from "../styles/home.module.css";
 
 export default function Home({ items }) {
