@@ -1,4 +1,4 @@
-import Layout from "@/components/Layout";
+import Layout from "../components/layout";
 import Product from "@/components/product";
 import { getItemData, getPathsFromTitle } from "@/lib/utils";
 
