@@ -1,9 +1,14 @@
+import { items } from "../seeders/items";
+
 export async function getItems() {
-  const request = await fetch(
-    "https://mocki.io/v1/62342ece-d822-46e8-8664-b6338ea301cb"
-  );
-  const items = await request.json();
-  return items;
+  // ESTO COMENTADO FUNCIONA BIEN
+  // const request = await fetch(
+  //   "https://mocki.io/v1/62342ece-d822-46e8-8664-b6338ea301cb"
+  // );
+  // const items = await request.json();
+  // return items;
+  const reqItems = items;
+  return reqItems;
 }
 
 export async function getLatestItems() {
@@ -11,4 +16,3 @@ export async function getLatestItems() {
 
   return items.slice(0, 3);
 }
-// http://localhost:3000/api/items
