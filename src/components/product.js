@@ -57,26 +57,20 @@ export default function Product({ item, showAs, qty }) {
     );
   }
   return (
-    <div className={style.item}>
-      <div>
-        <Link href={`/store/${convertToPath(item.title)}`}>
+    <div>
+      <Link href={`/store/${convertToPath(item.title)}`} className="group">
+        <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
           <Image
             src={item.image}
             alt={item.description}
             width={300}
             height={300}
+            className="h-full w-full object-cover object-center group-hover:opacity-75"
           />
-        </Link>
-      </div>
-      <div>
-        <h3>
-          <Link href={`/store/${convertToPath(item.title)}`}>{item.title}</Link>
-        </h3>
-      </div>
-      <div>${item.price}</div>
-      <div>
-        <CartButton item={item} />
-      </div>
+        </div>
+        <h3 className="mt-4 text-sm text-gray-700">{item.title}</h3>
+        <p className="mt-1 text-lg font-medium text-gray-900">${item.price}</p>
+      </Link>
     </div>
   );
 }

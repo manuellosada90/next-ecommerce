@@ -1,10 +1,10 @@
-.container {
+/* .container {
   padding: 0 2rem;
 }
 
 .banner {
   background-color: black;
-  /* background-image: url(../public/img/banner.webp); */
+  background-image: url(../public/img/banner.webp);
   background-size: cover;
   height: 500px;
 
@@ -133,4 +133,4 @@
     width: 100%;
     flex-direction: column;
   }
-}
+} */
