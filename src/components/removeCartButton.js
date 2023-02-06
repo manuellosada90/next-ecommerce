@@ -5,5 +5,12 @@ export default function RemoveCartButton({ item }) {
   function handleOnClick() {
     cart.removeItemFromCart(item);
   }
-  return <button onClick={handleOnClick}>Remove</button>;
+  return (
+    <button
+      onClick={handleOnClick}
+      className="font-medium text-indigo-600 hover:text-indigo-500"
+    >
+      Remove
+    </button>
+  );
 }

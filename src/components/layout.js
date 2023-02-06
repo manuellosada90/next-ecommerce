@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Footer from "./footer";
 // import style from "../styles/layout.module.css";
 import NavBar from "./navBar";
 import ShoppingCart from "./shoppingCart";
@@ -15,6 +16,7 @@ export default function Layout({ children, title }) {
       <NavBar />
       <div>{children}</div>
       <ShoppingCart />
+      <Footer />
     </div>
   );
 }

@@ -9,8 +9,9 @@ import Image from "next/image";
 // import Link from "next/link";
 import { useAppContext } from "./stateWrapper";
 import logo from "../../public/img/mark.svg";
+import Link from "next/link";
 const navigation = [
-  { name: "Home", href: "/", current: true },
+  { name: "Home", href: "/", current: false },
   { name: "Store", href: "/store", current: false },
   { name: "About", href: "/faq", current: false },
 ];
@@ -63,7 +64,7 @@ export default function NavBar() {
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
                         href={item.href}
                         className={classNames(
@@ -75,7 +76,7 @@ export default function NavBar() {
                         aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
