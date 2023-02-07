@@ -13,7 +13,7 @@ import Link from "next/link";
 const navigation = [
   { name: "Home", href: "/", current: false },
   { name: "Store", href: "/store", current: false },
-  { name: "About", href: "/faq", current: false },
+  { name: "About", href: "/about", current: false },
 ];
 
 function classNames(...classes) {
@@ -128,25 +128,3 @@ export default function NavBar() {
     </Disclosure>
   );
 }
-
-// export default function Menu() {
-
-//   return (
-//     <nav className={style.menu}>
-//       <div>
-//         <Link href="/store" className={style.link}>
-//           STORE
-//         </Link>
-//         <Link href="/faq" className={style.link}>
-//           FAQ
-//         </Link>
-//       </div>
-//       <div>
-//         <a href="#" className={style.link} onClick={handleOpenCart}>
-//           {" "}
-//           Cart ({cart.getNumberOfItems()})
-//         </a>
-//       </div>
-//     </nav>
-//   );
-// }

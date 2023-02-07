@@ -1,9 +1,11 @@
 import { useAppContext } from "./stateWrapper";
 export default function CartButton({ item }) {
   const cart = useAppContext();
-  function handleOnClick() {
+  function handleOnClick(e) {
+    e.preventDefault();
     cart.addItemToCart(item);
     cart.openCart();
+    console.log("cartButtton", item);
   }
   return (
     <button

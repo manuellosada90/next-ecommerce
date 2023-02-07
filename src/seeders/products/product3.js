@@ -1,5 +1,5 @@
 export const product3 = {
-  id: 0,
+  id: 3,
   title: "suit",
   price: 100,
   image: "/img/octocat.webp",

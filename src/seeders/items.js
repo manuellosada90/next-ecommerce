@@ -16,6 +16,14 @@ export const items = [
   product6,
   product7,
   product8,
+  product5,
+  product3,
+  product1,
+  product2,
+  product8,
+  product7,
+  product5,
+  product8,
 ];
 
 //"/public/img/octocat.webp"

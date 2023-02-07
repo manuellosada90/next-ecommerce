@@ -1,6 +1,6 @@
 import Layout from "../components/layout";
 
-export default function FAQ() {
+export default function About() {
   return (
     <div>
       <Layout>
