@@ -86,7 +86,7 @@ export default function About() {
                 />
               </div>
 
-              <div className="relative lg:ml-10">
+              <div className="relative lg:ml-10 max-w-3xl">
                 <blockquote className="relative">
                   <div className="text-2xl leading-9 font-medium text-gray-900">
                     <p>

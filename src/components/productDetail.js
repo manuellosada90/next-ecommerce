@@ -51,7 +51,7 @@ export default function ProductDetail({ item }) {
                 <Link href="/store">
                   <button
                     type="button"
-                    className="text-blue-700 border-2 border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 absolute mt-5"
+                    className="text-white border-2 border-white hover:bg-black hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 absolute mt-5"
                   >
                     <svg
                       aria-hidden="true"
@@ -206,7 +206,7 @@ export default function ProductDetail({ item }) {
                 <div className="mt-4 prose prose-sm text-gray-500">
                   <ul role="list">
                     {item.details.map((item) => (
-                      <li key={item.key}>{item}</li>
+                      <li key={item.id}>{item}</li>
                     ))}
                   </ul>
                 </div>
