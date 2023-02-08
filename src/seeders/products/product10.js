@@ -1,6 +1,6 @@
-export const product8 = {
-  id: 8,
-  title: "Plain shirt",
+export const product10 = {
+  id: 10,
+  title: "White plain shirt",
   price: 100,
   image: "/img/octocat.webp",
   description:
@@ -8,26 +8,26 @@ export const product8 = {
   images: [
     {
       id: 1,
-      imageSrc: "/img/products/8/1.jpg",
-      imageAlt: "plain shirt",
+      imageSrc: "/img/products/9/2.jpg",
+      imageAlt: "White plain shirt",
       primary: true,
     },
     {
       id: 2,
-      imageSrc: "/img/products/8/2.jpg",
-      imageAlt: "plain shirt",
+      imageSrc: "/img/products/9/2.jpg",
+      imageAlt: "White plain shirt",
       primary: false,
     },
     {
       id: 3,
-      imageSrc: "/img/products/8/3.jpg",
-      imageAlt: "plain shirt",
+      imageSrc: "/img/products/9/2.jpg",
+      imageAlt: "White plain shirt",
       primary: false,
     },
     {
       id: 3,
-      imageSrc: "/img/products/8/4.jpg",
-      imageAlt: "plain shirt",
+      imageSrc: "/img/products/9/2.jpg",
+      imageAlt: "White plain shirt",
       primary: false,
     },
   ],

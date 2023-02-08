@@ -10,36 +10,44 @@ export default function Home({ items }) {
     <Layout title="welcome">
       <div>
         <div className="relative">
-          <div className="sticky top-0 h-screen flex flex-col items-center justify-center bg-[url('/img/home/1.jpg')] bg-no-repeat bg-cover">
-            <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-              This is cool
+          <div className="sticky top-0 h-screen flex flex-col items-start justify-center bg-[url('/img/home/1.jpg')] bg-no-repeat bg-cover">
+            <h1 className="mb-4 ml-10 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+              Vintage meets
             </h1>
-
+            <h1 className="mb-4 ml-10 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+              visionary
+            </h1>
             <Link
               href="/store"
-              class="inline-block rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-center font-medium text-white hover:bg-indigo-700"
+              className="ml-10 inline-block rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-center font-medium text-white hover:bg-indigo-700"
             >
               Shop Collection
             </Link>
           </div>
-          <div className="sticky top-0 h-screen flex flex-col items-center justify-center bg-[url('/img/home/2.jpg')] bg-no-repeat bg-cover">
-            <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-              Fashion trends
+          <div className="sticky top-0 h-screen flex flex-col items-start justify-center bg-[url('/img/home/2.jpg')] bg-no-repeat bg-cover">
+            <h1 className="mb-4 ml-10 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-white">
+              20% off
+            </h1>
+            <h1 className="mb-4 ml-10 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-white">
+              + free shipping
             </h1>
             <Link
               href="/store"
-              class="inline-block rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-center font-medium text-white hover:bg-indigo-700"
+              className="ml-10 inline-block rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-center font-medium text-white hover:bg-indigo-700"
             >
               Shop Collection
             </Link>
           </div>
-          <div className="sticky top-0 h-screen flex flex-col items-center justify-center bg-[url('/img/home/3.jpg')] bg-no-repeat bg-cover">
-            <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-              Look good
+          <div className="sticky top-0 h-screen flex flex-col items-start justify-center bg-[url('/img/home/3.jpg')] bg-no-repeat bg-cover">
+            <h1 className="mb-4 ml-10 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+              Warm up
+            </h1>
+            <h1 className="mb-4 ml-10 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+              your winter
             </h1>
             <Link
               href="/store"
-              class="inline-block rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-center font-medium text-white hover:bg-indigo-700"
+              className="ml-10 inline-block rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-center font-medium text-white hover:bg-indigo-700"
             >
               Shop Collection
             </Link>
@@ -52,15 +60,14 @@ export default function Home({ items }) {
             Products
           </h2>
           <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-            Trending products
-          </h1>
+            Trending products{" "}
+          </h1>{" "}
           {/* <Link
             href="/store"
             className=" font-normal leading-none tracking-tight text-gray-900 text-4xl md:text-5xl lg:text-center dark:text-white "
           >
             - Go to store
           </Link> */}
-
           <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
             {items &&
               items.map((item) => (

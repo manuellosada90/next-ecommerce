@@ -2,7 +2,6 @@ import Layout from "../../components/layout";
 import Product from "@/components/product";
 import { getItems } from "@/services/itemService";
 import { useState } from "react";
-import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 export default function Index({ items }) {
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -25,21 +24,28 @@ export default function Index({ items }) {
             ))}
         </div>
       </div>
-      <nav className="border-t border-gray-200 px-4 flex items-center justify-between sm:px-0">
-        <div className="-mt-px w-0 flex-1 flex">
+      <nav aria-label="Page navigation example" className="flex justify-center">
+        <div className="inline-flex items-center -space-x-px">
           <button
             disabled={currentPage === 1}
             onClick={() => handlePageChange(currentPage - 1)}
-            className="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300"
+            className="block px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
           >
-            <ArrowLeftIcon
-              className="mr-3 h-5 w-5 text-gray-400"
+            <span class="sr-only">Previous</span>
+            <svg
               aria-hidden="true"
-            />
-            Previous
+              className="w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
           </button>
-        </div>
-        <div className="hidden md:-mt-px md:flex">
           {[...Array(totalPages)].map((_, i) => (
             <button
               key={i + 1}
@@ -48,24 +54,32 @@ export default function Index({ items }) {
                 color: i + 1 === currentPage ? "white" : "black",
               }}
               onClick={() => handlePageChange(i + 1)}
-              className="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 border-t-2 pt-4 px-4 inline-flex items-center text-sm font-medium"
+              className="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             >
               {i + 1}
             </button>
           ))}
-        </div>
-        <div className="-mt-px w-0 flex-1 flex justify-end">
+
           <button
+            href="#"
+            className="block px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             disabled={currentPage === Math.ceil(items.length / itemsPerPage)}
             onClick={() => handlePageChange(currentPage + 1)}
-            href="#"
-            className="border-t-2 border-transparent pt-4 pl-1 inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300"
           >
-            Next
-            <ArrowRightIcon
-              className="ml-3 h-5 w-5 text-gray-400"
+            <span className="sr-only">Next</span>
+            <svg
               aria-hidden="true"
-            />
+              className="w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
           </button>
         </div>
       </nav>

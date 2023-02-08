@@ -6,7 +6,7 @@ export default function StoreProducts({ item }) {
   return (
     <div>
       <Link href={`/store/${convertToPath(item.title)}`} className="group">
-        <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg sm:aspect-w-2 sm:aspect-h-3">
+        <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
           <Image
             src={item.images[0].imageSrc}
             alt={item.description}

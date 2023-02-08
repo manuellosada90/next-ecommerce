@@ -1,6 +1,6 @@
 export const product7 = {
   id: 7,
-  title: "striped shirt",
+  title: "Striped shirt",
   price: 100,
   image: "/img/octocat.webp",
   description:

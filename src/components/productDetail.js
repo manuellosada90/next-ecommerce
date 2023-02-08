@@ -6,6 +6,7 @@ import {
 import { useState } from "react";
 import { RadioGroup } from "@headlessui/react";
 import CartButton from "./cartButton";
+import Link from "next/link";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -46,7 +47,29 @@ export default function ProductDetail({ item }) {
             {/* Image gallery */}
             <div className="mt-8 lg:mt-0 lg:col-start-1 lg:col-span-7 lg:row-start-1 lg:row-span-3">
               <h2 className="sr-only">Images</h2>
-
+              <div className="flex justify-start ml-5">
+                <Link href="/store">
+                  <button
+                    type="button"
+                    className="text-blue-700 border-2 border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 absolute mt-5"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className="w-5 h-5 rotate-180"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    <span className="sr-only">Icon description</span>
+                  </button>
+                </Link>
+              </div>
               <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 lg:gap-8">
                 {item.images.map((image) => (
                   <Image
