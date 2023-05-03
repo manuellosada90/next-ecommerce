@@ -1,6 +1,6 @@
 export const product6 = {
   id: 6,
-  title: "Trucker jacket",
+  title: "Jean jacket",
   price: 100,
   image: "/img/octocat.webp",
   description:
@@ -9,25 +9,25 @@ export const product6 = {
     {
       id: 1,
       imageSrc: "/img/products/6/1.jpg",
-      imageAlt: "trucker jacket",
+      imageAlt: "Jean jacket",
       primary: true,
     },
     {
       id: 2,
       imageSrc: "/img/products/6/2.jpg",
-      imageAlt: "trucker jacket",
+      imageAlt: "Jean jacket",
       primary: false,
     },
     {
       id: 3,
       imageSrc: "/img/products/6/3.jpg",
-      imageAlt: "trucker jacket",
+      imageAlt: "Jean jacket",
       primary: false,
     },
     {
       id: 3,
       imageSrc: "/img/products/6/4.jpg",
-      imageAlt: "trucker jacket",
+      imageAlt: "Jean jacket",
       primary: false,
     },
   ],
