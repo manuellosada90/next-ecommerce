@@ -95,30 +95,3 @@ export async function getStaticProps() {
     },
   };
 }
-
-//   <button
-//   disabled={currentPage === 1}
-//   onClick={() => handlePageChange(currentPage - 1)}
-// >
-//   Anterior
-// </button>
-// <div style={{ display: "flex" }}>
-//   {[...Array(totalPages)].map((_, i) => (
-//     <button
-//       key={i + 1}
-//       style={{
-//         backgroundColor: i + 1 === currentPage ? "blue" : "white",
-//         color: i + 1 === currentPage ? "white" : "black",
-//       }}
-//       onClick={() => handlePageChange(i + 1)}
-//     >
-//       {i + 1}
-//     </button>
-//   ))}
-// </div>
-// <button
-//   disabled={currentPage === Math.ceil(items.length / itemsPerPage)}
-//   onClick={() => handlePageChange(currentPage + 1)}
-// >
-//   Siguiente
-// </button>

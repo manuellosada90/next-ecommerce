@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Footer from "./footer";
-// import style from "../styles/layout.module.css";
 import NavBar from "./navBar";
 import ShoppingCart from "./shoppingCart";
 

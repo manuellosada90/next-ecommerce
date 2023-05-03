@@ -1,4 +1,3 @@
-// import style from "../styles/cartButton.module.css";
 import { useAppContext } from "./stateWrapper";
 export default function RemoveCartButton({ item }) {
   const cart = useAppContext();

@@ -6,7 +6,6 @@ import {
   ShoppingCartIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
-// import Link from "next/link";
 import { useAppContext } from "./stateWrapper";
 import logo from "../../public/img/mark.svg";
 import Link from "next/link";

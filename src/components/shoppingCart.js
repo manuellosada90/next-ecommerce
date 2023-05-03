@@ -1,8 +1,5 @@
 import Product from "./product";
 import { useAppContext } from "./stateWrapper";
-// import style from "../styles/shoppingCart.module.css";
-// import { useRef } from "react";
-// import useOnClickOutside from "@/hooks/useOnClickOutside";
 import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
@@ -10,12 +7,7 @@ import Link from "next/link";
 
 export default function ShoppingCart() {
   const cart = useAppContext();
-  // const ref = useRef();
-  // useOnClickOutside(ref, () => cart.closeCart());
-  // function handleCloseCart() {
-  //   cart.closeCart();
-  // }
-  // const [open, setOpen] = useState(true);
+
   function getTotal() {
     const total = cart.items.reduce(
       (acc, item) => acc + item.qty * item.price,

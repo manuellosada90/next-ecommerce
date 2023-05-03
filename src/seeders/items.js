@@ -33,5 +33,3 @@ export const items = [
   product15,
   product16,
 ];
-
-//"/public/img/octocat.webp"

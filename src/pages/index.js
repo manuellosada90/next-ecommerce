@@ -4,8 +4,6 @@ import { getLatestItems } from "@/services/itemService";
 import Product from "@/components/product";
 import Link from "next/link";
 import Image from "next/image";
-// import styleProduct from "../styles/product.module.css";
-// import style from "../styles/home.module.css";
 
 export default function Home({ items }) {
   return (
