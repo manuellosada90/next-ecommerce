@@ -1,20 +1,35 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const AppContext = createContext({
   isOpen: false,
   items: [],
   openCart: () => {},
   closeCart: () => {},
-  // eslint-disable-next-line no-unused-vars
-  addItemToCart: (item) => {},
+  addItemToCart: () => {},
   getNumberOfItems: () => {},
-  // eslint-disable-next-line no-unused-vars
-  removeItemFromCart: (item) => {},
+  removeItemFromCart: () => {},
 });
 
 export default function StateWrapper({ children }) {
   const [isOpen, setIsOpen] = useState(false);
   const [items, setItems] = useState([]);
+
+  // Función para guardar el estado del carrito en el localStorage
+  const saveCartToLocalStorage = (cartItems) => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  };
+
+  // Función para cargar el estado del carrito del localStorage
+  const loadCartFromLocalStorage = () => {
+    const cartItems = localStorage.getItem("cartItems");
+    if (cartItems) {
+      setItems(JSON.parse(cartItems));
+    }
+  };
+
+  useEffect(() => {
+    loadCartFromLocalStorage();
+  }, []);
 
   function handleOpenCart() {
     setIsOpen(true);
@@ -34,18 +49,21 @@ export default function StateWrapper({ children }) {
       temp.push(item);
     }
     setItems([...temp]);
+    saveCartToLocalStorage(temp); // guardar el estado del carrito en localStorage
   }
 
   function handleRemoveItemFromCart(item) {
     const temp = [...items];
     const found = temp.filter((product) => product.id !== item.id);
     setItems([...found]);
+    saveCartToLocalStorage(found); // guardar el estado del carrito en localStorage
   }
 
   function handleNumberOfItems() {
     const total = items.reduce((acc, item) => acc + item.qty, 0);
     return total;
   }
+
   return (
     <AppContext.Provider
       value={{
